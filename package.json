@@ -1,5 +1,5 @@
 {
-  "name": "wavy",
+  "name": "portfolio_website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,7 +19,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
+    "test react": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -54,6 +55,6 @@
     "postcss": "^8.4.23",
     "prettier": "2.8.8",
     "styled-components": "^5.3.10",
-    "tailwindcss": "^3.3.2"
+    "tailwindcss": "2"
   }
 }
