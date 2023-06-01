@@ -1,11 +1,13 @@
-import React from 'react'
-import './App.css'
-
+import './styles/App.css'
+import { join } from './utils'
+import { Typography } from './Typeography'
 function App() {
   return (
-    <h1 className='text-3xl font-bold underline text-red-600'>
-      Simple React Typescript Tailwind Sample
-    </h1>
+    <div className={join('text-center bg-background h-full m-0')}>
+      <Typography variant='h1' className=' text-text'>
+        Jacob Wilson
+      </Typography>
+    </div>
   )
 }
 
