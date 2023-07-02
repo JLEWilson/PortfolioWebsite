@@ -6,7 +6,7 @@ export const githubApi = createApi({
   }),
   endpoints: (builder) => ({
     getUserData: builder.query({
-      query: () => 'users/jlewilson/',
+      query: () => 'users/jlewilson',
     }),
   }),
 })
