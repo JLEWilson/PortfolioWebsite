@@ -1,9 +1,12 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore, MiddlewareArray } from '@reduxjs/toolkit'
 import { githubApi } from './features/githubSlice'
+import logger from 'redux-logger'
 export const store = configureStore({
   reducer: {
-    github: githubApi.reducer,
+    [githubApi.reducerPath]: githubApi.reducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(githubApi.middleware),
 })
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
