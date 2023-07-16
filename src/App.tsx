@@ -1,20 +1,18 @@
 import { join } from './utils'
 import { Typography } from './Typography'
-import { store } from './store'
 import About from './components/about'
-import { Provider } from 'react-redux'
-import ProjectListWrapper from './components/projectListWrapper'
+import ProjectList from './components/projectList'
+import REPOSITORY_LIST from './features/RepositoryList'
+
 function App() {
   return (
-    <Provider store={store}>
-      <div className={join('text-center bg-background m-0')}>
-        <Typography variant='h1' className={join('text-text')}>
-          Jacob Wilson
-        </Typography>
-        <About />
-        <ProjectListWrapper />
-      </div>
-    </Provider>
+    <div className={join('text-center bg-background min-h-screen m-0 p-0')}>
+      <Typography variant='h1' className={join('text-text')}>
+        Jacob Wilson
+      </Typography>
+      <About />
+      <ProjectList reposList={REPOSITORY_LIST} />
+    </div>
   )
 }
 
