@@ -12,6 +12,9 @@ export const githubApi = createApi({
       query: (page) =>
         `users/jlewilson/repos?sort=pushed&per_page=100&page=${page})`,
     }),
+    getRepoByName: builder.query({
+      query: (name) => `repos/jlewilson/${name}`,
+    }),
   }),
 })
 
@@ -19,4 +22,6 @@ export const {
   useGetUserDataQuery,
   useGetReposByPageQuery,
   useLazyGetReposByPageQuery,
+  useGetRepoByNameQuery,
+  useLazyGetRepoByNameQuery,
 } = githubApi
