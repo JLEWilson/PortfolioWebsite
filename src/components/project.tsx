@@ -5,11 +5,17 @@ import { repository } from '../features/RepositoryList'
 
 type projectPropTypes = {
   repoData: repository
+  index: number
+  maxIndex: number
 }
 
 const Project = ({ repoData }: projectPropTypes) => {
   return (
-    <div className={join('bg-green-700 border-solid border-black border')}>
+    <div
+      className={join(
+        'bg-primary rounded-3xl p-5 border-solid font-Roboto border-black border snap-center ',
+      )}
+    >
       <Typography variant='h2' className={join('m-2')}>
         {repoData.name}
       </Typography>
