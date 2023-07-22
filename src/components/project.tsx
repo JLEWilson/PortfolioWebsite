@@ -5,8 +5,6 @@ import { repository } from '../features/RepositoryList'
 
 type projectPropTypes = {
   repoData: repository
-  index: number
-  maxIndex: number
 }
 
 const Project = ({ repoData }: projectPropTypes) => {

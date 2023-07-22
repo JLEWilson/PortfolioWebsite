@@ -11,13 +11,9 @@ type projectPropTypes = {
 
 const ProjectList = (props: projectPropTypes) => {
   return (
-    <div
-      className={join(
-        'w-9/12 m-auto border-dashed border-white border text-text',
-      )}
-    >
+    <div className={join('w-9/12 mt-60 space-y-60 pb-60 m-auto  text-text')}>
       {props.reposList.map((repo, index) => (
-        <Project repoData={repo} key={index}></Project>
+        <Project repoData={repo} key={index} />
       ))}
     </div>
   )
