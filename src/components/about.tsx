@@ -5,8 +5,13 @@ import { join } from '../utils'
 
 const About = () => {
   return (
-    <div className={join(center, 'm-12')}>
-      <Typography variant='h3' className='text-text'>
+    <div
+      className={join(
+        center,
+        'mt-60 snap-center font-Changa bg-black font-light mx-20',
+      )}
+    >
+      <Typography variant='h2' className='text-secondary'>
         Lorem ipsum dolor sit amet. 33 consequuntur praesentium est sunt possimus
         eum optio modi quo recusandae quia aut quisquam libero est eaque
         obcaecati! Sit quae natus et perspiciatis quod et quia quod et fugiat
