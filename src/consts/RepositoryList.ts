@@ -1,3 +1,5 @@
+import { GithubIcon, PlayStoreIcon } from './icons'
+import type { svgProps } from './icons'
 export type repository = {
   name: string
   imgPath?: string
@@ -9,7 +11,7 @@ export type repository = {
 type projectLink = {
   name: string
   url: string
-  icon?: string
+  icon: (props: svgProps) => JSX.Element
 }
 
 const REPOSITORY_LIST: repository[] = [
@@ -24,12 +26,12 @@ const REPOSITORY_LIST: repository[] = [
       {
         name: 'Github',
         url: 'https://github.com/JLEWilson/TaskStak',
-        icon: '',
+        icon: GithubIcon,
       },
       {
         name: 'PlayStore',
         url: 'https://play.google.com/store/apps/details?id=com.jlewilson.TaskStak&hl=en_US&gl=US',
-        icon: '',
+        icon: PlayStoreIcon,
       },
     ],
   },
@@ -37,19 +39,13 @@ const REPOSITORY_LIST: repository[] = [
     name: 'GoGoYonder',
     imgPath: '',
     languages: ['TypeScript'],
-    technologies: [
-      'React',
-      'SQLite',
-      'Tailwind',
-      "Google's Maps, Places, and Autocomplete Api's",
-      'Figma',
-    ],
+    technologies: ['React', 'SQLite', 'Tailwind', "Google Api's", 'Figma'],
     description: 'A road trip planning application',
     links: [
       {
         name: 'Github',
         url: 'https://github.com/JLEWilson/GoGoYonder',
-        icon: '',
+        icon: GithubIcon,
       },
     ],
   },
@@ -71,12 +67,12 @@ const REPOSITORY_LIST: repository[] = [
       {
         name: 'Github',
         url: 'https://github.com/JLEWilson/Playable_Portfolio',
-        icon: '',
+        icon: GithubIcon,
       },
       {
         name: 'GH Pages',
         url: 'https://jlewilson.github.io/Playable_Portfolio/',
-        icon: '',
+        icon: GithubIcon,
       },
     ],
   },
@@ -91,12 +87,12 @@ const REPOSITORY_LIST: repository[] = [
       {
         name: 'Github',
         url: 'https://github.com/JLEWilson/Escape_from_Mr.Robogers_Neighborhood',
-        icon: '',
+        icon: GithubIcon,
       },
       {
         name: 'GH Pages',
         url: 'https://jlewilson.github.io/Escape_from_Mr.Robogers_Neighborhood/',
-        icon: '',
+        icon: GithubIcon,
       },
     ],
   },
@@ -111,7 +107,7 @@ const REPOSITORY_LIST: repository[] = [
       {
         name: 'Github',
         url: 'https://github.com/JLEWilson/Pierre-sSweetAndSavoryTreats.Solution',
-        icon: '',
+        icon: GithubIcon,
       },
     ],
   },
