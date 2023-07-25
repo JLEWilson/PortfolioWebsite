@@ -1,9 +1,7 @@
 import React from 'react'
-
-import { Typography } from '../Typography'
 import { join } from '../utils'
 import Project from './project'
-import { repository } from '../features/RepositoryList'
+import { repository } from '../consts/RepositoryList'
 
 type projectPropTypes = {
   reposList: repository[]
@@ -11,7 +9,7 @@ type projectPropTypes = {
 
 const ProjectList = (props: projectPropTypes) => {
   return (
-    <div className={join('w-9/12 mt-60 space-y-60 pb-60 m-auto  text-text')}>
+    <div className={join('w-9/12 mt-60 space-y-60 pb-60 m-auto text-text')}>
       {props.reposList.map((repo, index) => (
         <Project repoData={repo} key={index} />
       ))}
