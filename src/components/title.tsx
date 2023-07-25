@@ -8,7 +8,7 @@ function Title() {
         className={join(
           'relative overflow-hidden',
           'solid',
-          'xl:h-[192px] h-[90px]',
+          'xl:h-[192px] md:h-[90px] h-[36px]',
           'snap-center',
           'fixed top-1/2 left-1/2',
           '-translate-x-1/2',
@@ -17,25 +17,23 @@ function Title() {
         <h1
           className={join(
             'font-Roboto font-normal',
-            'text-text xl:text-9xl/normal text-6xl/normal',
+            'text-text xl:text-9xl/normal md:text-6xl/normal text-2xl/normal',
             'absolute',
             'top-0',
             'left-0',
             'w-full',
-            'xl:animate-bigSlide animate-smallSlide',
+            'xl:animate-bigSlide md:animate-Slide animate-smallSlide',
           )}
         >
-          Full Stack Engineer
+          Full-Stack Web Developer
           <br />
-          Front End Developer
+          Mobile App Developer
           <br />
-          Back End Developer
+          Software Engineer
           <br />
-          React Developer
+          Gamer
           <br />
-          Mobile Developer
-          <br />
-          Full Stack Engineer
+          Cat Parent
         </h1>
       </div>
     </div>
