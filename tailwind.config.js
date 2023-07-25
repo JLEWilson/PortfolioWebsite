@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       animation: {
         bigSlide: 'text-slide-lg 8s infinite',
+        Slide: 'text-slide 8s infinite',
         smallSlide: 'text-slide-sm 8s infinite',
       },
       keyframes: {
@@ -14,15 +15,20 @@ module.exports = {
           '40%': { top: '-384px' },
           '60%': { top: '-576px' },
           '80%': { top: '-768px' },
-          '100%': { top: '-936px' },
         },
-        'text-slide-sm': {
+        'text-slide': {
           '0%': { top: '0' },
           '20%': { top: '-90px' },
           '40%': { top: '-180px' },
           '60%': { top: '-270px' },
           '80%': { top: '-360px' },
-          '100%': { top: '-450px' },
+        },
+        'text-slide-sm': {
+          '0%': { top: '0' },
+          '20%': { top: '-36px' },
+          '40%': { top: '-72px' },
+          '60%': { top: '-108px' },
+          '80%': { top: '-144px' },
         },
       },
       colors: {
