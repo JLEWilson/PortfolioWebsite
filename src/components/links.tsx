@@ -1,7 +1,7 @@
 import React from 'react'
 
 type linkProps = {
-  icon: JSX.Element
+  icon: React.JSX.Element
   url: string
 }
 
