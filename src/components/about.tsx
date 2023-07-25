@@ -8,15 +8,17 @@ const About = () => {
     <div
       className={join(
         center,
-        'mt-60 snap-center font-Changa bg-black font-light mx-20',
+        'md:mt-52 mt-40 snap-center flex flex-col font-Changa font-light md:mx-20 mx-5',
       )}
     >
+      <Typography variant='h1' className='text-text mb-5'>
+        About Me
+      </Typography>
       <Typography variant='h2' className='text-secondary'>
-        Lorem ipsum dolor sit amet. 33 consequuntur praesentium est sunt possimus
-        eum optio modi quo recusandae quia aut quisquam libero est eaque
-        obcaecati! Sit quae natus et perspiciatis quod et quia quod et fugiat
-        facere. Quo dolorem temporibus vel suscipit fuga nam dolore corrupti nam
-        quam unde vel veritatis odit qui quaerat ullam eum minima suscipit.
+        I'm a perpetually curious self-taught coder. My journey began learning C#
+        in order to develop video games as a hobby, and I'm now eager to find my
+        first tech role after completing a coding bootcamp and interning at a
+        tech startup in Portland. Let's create something great together!
       </Typography>
     </div>
   )
