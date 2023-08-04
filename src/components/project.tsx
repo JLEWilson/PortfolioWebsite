@@ -8,6 +8,15 @@ type projectPropTypes = {
   repoData: repository
 }
 
+const delayTransitions = [
+  'delay-[75ms]',
+  'delay-[150ms]',
+  'delay-[225ms]',
+  'delay-[300ms]',
+  'delay-[375ms]',
+  'delay-[450ms]',
+]
+
 const Project = ({ repoData }: projectPropTypes) => {
   return (
     <div
@@ -28,7 +37,8 @@ const Project = ({ repoData }: projectPropTypes) => {
               'fill-secondary bg-primary',
               'rounded-full py-2 px-4  mx-auto',
               'transition',
-              'group-hover/project:fill-primary group-hover/project:bg-secondary group-hover/project:text-primary',
+              'duration-700',
+              'group-hover/project:fill-background group-hover/project:bg-secondary group-hover/project:text-background',
             )}
           >
             <span>{link.icon({ width: 24, height: 24 })}</span>
@@ -36,24 +46,37 @@ const Project = ({ repoData }: projectPropTypes) => {
           </a>
         ))}
       </div>
-      <Typography variant='h4' className={join('mb-4')}>
+      <Typography variant='h4' className={join('my-4')}>
         {repoData.description}
       </Typography>
-      <div className={join('flex flex-wrap justify-center')}>
+      <div className={join('flex flex-wrap gap-1.5 justify-center')}>
         {repoData.languages.map((language, index) => (
           <Typography
-            variant='body'
+            variant='small'
             key={'language ' + index}
-            className='bg-secondary text-primary rounded-full py-2 px-3'
+            className={join(
+              'bg-secondary text-background ',
+              'transition',
+              'duration-300',
+              'group-hover/project:text-secondary group-hover/project:bg-background',
+              'rounded-full py-2 px-3',
+            )}
           >
             {language}
           </Typography>
         ))}
         {repoData.technologies.map((tech, index) => (
           <Typography
-            variant='body'
+            variant='small'
             key={'technology ' + index}
-            className='bg-secondary text-primary rounded-full py-2 px-3'
+            className={join(
+              'bg-secondary text-background ',
+              'transition',
+              'duration-300',
+              delayTransitions[index],
+              'group-hover/project:text-secondary group-hover/project:bg-background',
+              'rounded-full py-2 px-3',
+            )}
           >
             {tech}
           </Typography>
