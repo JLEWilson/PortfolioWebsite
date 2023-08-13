@@ -24,7 +24,7 @@ const links: linkProps[] = [
 
 function Links() {
   return (
-    <ul className='absolute top-10 right-10 flex space-x-8'>
+    <ul className='flex space-x-8'>
       {links.map((link, index) => (
         <li key={index}>
           <a className='fill-text' href={link.url}>
