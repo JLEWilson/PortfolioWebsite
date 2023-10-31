@@ -20,21 +20,29 @@ function Title() {
             'text-text xl:text-9xl/normal md:text-6xl/normal text-2xl/normal',
             'absolute',
             'top-0',
-            'left-0',
-            'w-full',
+            'right-1/2',
+            'w-1/2',
             'xl:animate-bigSlide md:animate-Slide animate-smallSlide',
           )}
         >
-          Full-Stack Web Developer
+          Web
           <br />
-          Mobile App Developer
+          Mobile
           <br />
-          Software Engineer
+          Front-End
           <br />
-          Gamer
+          Back-End
           <br />
-          Cat Parent
+          Software
         </h1>
+        <h1 className={join(
+            'font-Roboto font-normal',
+            'text-text xl:text-9xl/normal md:text-6xl/normal text-2xl/normal',
+            'absolute',
+            'top-0',
+            'left-1/2',
+            'w-1/2',
+          )}>Developer</h1>
       </div>
     </div>
   )
