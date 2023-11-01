@@ -35,7 +35,7 @@ const Project = ({ repoData }: projectPropTypes) => {
             className={join(
               'flex space-x-1.5',
               'fill-secondary bg-primary',
-              'rounded-full py-2 px-4  mx-auto',
+              'rounded-full py-2 px-2 sm:px-4  mx-auto',
               'transition',
               'duration-700',
               'group-hover/project:fill-background group-hover/project:bg-secondary group-hover/project:text-background',
