@@ -10,7 +10,7 @@ function Title() {
           'xl:h-[192px] md:h-[90px] h-[36px]',
           'snap-center',
           'rounded',
-          'fixed top-1/2 left-1/2',
+          'fixed md:top-1/2 top-3/4 left-1/2',
           '-translate-x-1/2',
         )}
       >
