@@ -11,7 +11,7 @@ type projectPropTypes = {
 const ProjectList = (props: projectPropTypes) => {
   return (
     <section className='mt-60 font-Changa font-light text-text  md:mx-20 mx-5'>
-      <Typography variant='h1' className='snap-center'>
+      <Typography variant='h1' >
         Projects
       </Typography>
       <hr className='my-2 mx-[30vw]' />
