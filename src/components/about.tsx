@@ -5,7 +5,7 @@ import { join } from '../utils'
 const About = () => {
   return (
     <section
-      className={join('md:mt-52 mt-40 font-Changa font-light md:mx-20 mx-5')}
+      className={join('md:mt-52 mt-40 font-Changa font-light md:mx-20 mx-5 snap-center')}
     >
       <Typography variant='h1' className='text-text'>
         About Me
