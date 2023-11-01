@@ -6,10 +6,10 @@ function Title() {
     <div className='h-[33vh]'>
       <div
         className={join(
-          'relative overflow-hidden',
-          'solid',
+          'relative overflow-hidden',         
           'xl:h-[192px] md:h-[90px] h-[36px]',
           'snap-center',
+          'rounded',
           'fixed top-1/2 left-1/2',
           '-translate-x-1/2',
         )}
@@ -20,8 +20,9 @@ function Title() {
             'text-text xl:text-9xl/normal md:text-6xl/normal text-2xl/normal',
             'absolute',
             'top-0',
+            'bg-primary',
             'right-1/2',
-            'w-1/2',
+            'pl-4 pr-2',
             'xl:animate-bigSlide md:animate-Slide animate-smallSlide',
           )}
         >
@@ -40,8 +41,9 @@ function Title() {
             'text-text xl:text-9xl/normal md:text-6xl/normal text-2xl/normal',
             'absolute',
             'top-0',
+            'bg-secondary',
+            'pl-2 pr-4',
             'left-1/2',
-            'w-1/2',
           )}>Developer</h1>
       </div>
     </div>
