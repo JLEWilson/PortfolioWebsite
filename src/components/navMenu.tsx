@@ -8,24 +8,16 @@ import Modal from './modal'
 
 function NavMenu() {
   const [modalOpen, setModalOpen] = React.useState(false)
-  const handleClick = () => {
-    setModalOpen(!modalOpen)
-  }
   return (
     <div className=''>
       {
         modalOpen &&  
         <div className='absolute top-10 right-10 bg-secondary w-20 h-20 '>
-          <Modal />
+          <Modal open={modalOpen} onClose={() => setModalOpen(false)}><h1>This is text</h1></Modal>
         </div>
       }
-      <div onClick={handleClick}>
-        {
-          modalOpen ? 
-              CloseIcon({ height: 24, width:24 }) 
-           
-          : MenuIcon({ height: 24, width: 24 })
-        }
+      <div onClick={() => setModalOpen(true)}>     
+        {MenuIcon({ height: 24, width: 24 })}
       </div> 
 
       <div className='hidden md:block'>
