@@ -11,10 +11,13 @@ import React from 'react';
 //     }
 // }
 
-const Modal = () => {
+const Modal = ({ open, onClose, children}) => {
     return (
-        <div className=''>
-            
+        //backdrop
+        <div className={`fixed inset-0 justify-center items-center transition-colors
+            ${open ? "visible bg-black/20" : "invisible"}`}>
+        {/* modal */}
+            <div className={`bg-white rounded-xl shado p-6 transition-all`}></div>
         </div>
     );
 };
