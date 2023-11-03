@@ -5,8 +5,9 @@ module.exports = {
     extend: {
       animation: {
         bigSlide: 'text-slide-lg 8s infinite',
-        Slide: 'text-slide 8s infinite',
+        slide: 'text-slide 8s infinite',
         smallSlide: 'text-slide-sm 8s infinite',
+        modalOpen: ''
       },
       keyframes: {
         'text-slide-lg': {
@@ -30,6 +31,10 @@ module.exports = {
           '60%': { top: '-108px' },
           '80%': { top: '-144px' },
         },
+        'modal-open' : {
+          '0%': { top: "10", right: '10' },
+          '100%': {top: '0', right: '0'}
+        }
       },
       colors: {
         background: '#001C30',
