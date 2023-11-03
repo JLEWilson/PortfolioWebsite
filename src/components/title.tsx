@@ -23,7 +23,7 @@ function Title() {
             'bg-primary',
             'right-1/2',
             'pl-4 pr-2',
-            'xl:animate-bigSlide md:animate-Slide animate-smallSlide',
+            'xl:animate-bigSlide md:animate-slide animate-smallSlide',
           )}
         >
           Web
