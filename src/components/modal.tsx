@@ -1,32 +1,22 @@
 import React from 'react';
 import { CloseIcon } from '../consts/icons';
 
-// interface modalProps {
-//     width: string | number
-//     height:string | number
-//     alignment: {
-//         top: string | number
-//         right: string | number
-//         bottom: string | number
-//         left: string | number
-//     }
-// }
-
 function Modal({ open, onClose, children }: any) {
   return (
     // backdrop
     <div
-      className={`fixed inset-0 justify-center items-center transition-colors
-            ${open ? 'visible bg-black/20' : 'invisible'}`}
+      className={`fixed z-10 inset-0 justify-center items-center transition-colors
+            ${open ? 'visible bg-black/40' : 'invisible'}`}
     >
       {/* modal */}
       <div
-        className={`bg-white rounded-xl shado p-6 transition-all
+        className={`bg-primary rounded-xl sticky shadow p-6 w-1/3 h-1/2 ml-auto transition-all
             ${open ? 'scale-100 opacity-100' : 'scale-125 opacity-0'}`}
       >
         <button
+          type="button"
           onClick={onClose}
-          className="absolute top-2 right-2 p-1 roudned-lg text-text bg-primary hover:bg-secondary"
+          className="absolute top-2 right-2 p-2 rounded-lg text-text bg-primary hover:bg-secondary"
         >
           {CloseIcon({ height: 24, width: 24 })}
         </button>
