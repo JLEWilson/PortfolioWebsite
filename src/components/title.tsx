@@ -1,17 +1,19 @@
 import React from 'react'
 import { Typography } from '../Typography'
 import { join } from '../utils'
+
 function Title() {
   return (
     <div className='h-[33vh]'>
       <div
         className={join(
-          'relative overflow-hidden',         
+          'relative overflow-hidden',
           'xl:h-[192px] md:h-[90px] h-[36px]',
           'snap-center',
           'rounded',
           'fixed md:top-1/2 top-3/4 left-1/2',
           '-translate-x-1/2',
+          'z-1'
         )}
       >
         <h1
@@ -37,14 +39,16 @@ function Title() {
           Software
         </h1>
         <h1 className={join(
-            'font-Roboto font-normal',
-            'text-text xl:text-9xl/normal md:text-6xl/normal text-2xl/normal',
-            'absolute',
-            'top-0',
-            'bg-secondary',
-            'pl-2 pr-4',
-            'left-1/2',
-          )}>Developer</h1>
+          'font-Roboto font-normal',
+          'text-text xl:text-9xl/normal md:text-6xl/normal text-2xl/normal',
+          'absolute',
+          'top-0',
+          'bg-secondary',
+          'pl-2 pr-4',
+          'left-1/2',
+        )}>
+            Developer
+            </h1>
       </div>
     </div>
   )
