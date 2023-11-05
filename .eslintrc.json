@@ -10,6 +10,7 @@
     }
   },
   "rules": {
+    
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -28,6 +29,32 @@
       "allowTemplateLiterals": true
     }
     ],
-    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "max-len": ["error", { "code": 81 }],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "no-tabs": ["error", { "allowIndentationTabs": false }],
+    "semi": ["error", "never"],
+    "quotes": ["error", "single"],
+    "quote-props": ["error", "consistent"],
+    "jsx-quotes": ["error", "prefer-single"],
+    "comma-dangle": ["error", "always-multiline"],
+    "object-curly-spacing": ["error", "always"],
+    "array-bracket-spacing": ["error", "always"],
+    "object-curly-newline": ["error", { "multiline": true, "consistent": true }],
+    "array-element-newline": ["error", { "multiline": true, "consistent": true }],
+    "arrow-parens": ["error", "always"],
+    "prettier/prettier": [
+      "error",
+      {
+        "requirePragma": false,
+        "insertPragma": false,
+        "proseWrap": "never",
+        "htmlWhitespaceSensitivity": "css",
+        "vueIndentScriptAndStyle": false,
+        "endOfLine": "lf",
+        "embeddedLanguageFormatting": "auto"
+      }
+    ]
+
   }
 }
