@@ -1,1 +1,2 @@
-export const join = (...args: string[]): string => args.join(` `)
+const join = (...args: string[]): string => args.join(' ')
+export default join
