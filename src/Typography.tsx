@@ -1,11 +1,11 @@
-import { ElementType } from 'react'
+import { ElementType, ReactNode } from 'react'
 
 type Variant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'body' | 'body-small' | 'small'
 
 interface Props {
   variant: Variant
-  children: React.ReactNode
-  className?: string
+  children: ReactNode
+  className?: string 
   as?: ElementType
 }
 
