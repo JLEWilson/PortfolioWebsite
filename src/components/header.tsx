@@ -1,5 +1,5 @@
 import React from 'react'
-import { join } from '../utils'
+import join from '../utils'
 import { Typography } from '../Typography'
 
 function Header() {

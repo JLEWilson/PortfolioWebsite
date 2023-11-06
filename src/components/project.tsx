@@ -1,6 +1,6 @@
 import React from 'react'
 import { Typography } from '../Typography'
-import { join } from '../utils'
+import join from '../utils'
 import { repository } from '../consts/RepositoryList'
 import { PlayStoreIcon } from '../consts/icons'
 
