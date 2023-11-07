@@ -43,7 +43,7 @@
     "jsx-quotes": ["error", "prefer-single"],
     "comma-dangle": ["error", "always-multiline"],
     "object-curly-spacing": ["error", "always"],
-    "array-bracket-spacing": ["error", "always"],
+    "array-bracket-spacing": ["error", "never"],
     "object-curly-newline": ["error", { "multiline": true, "consistent": true }],
     "arrow-parens": ["error", "always"],
     "prettier/prettier": [
