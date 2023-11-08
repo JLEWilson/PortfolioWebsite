@@ -24,22 +24,23 @@ function Modal({ open, onClose, children }: any) {
   return (
     // backdrop
     <div
-      className={`fixed inset-0 justify-center items-center t
-      ransition-colors z-10
+      className={`fixed inset-0 justify-center items-center 
+      transition-colors z-10
             ${open ? 'visible bg-black/40' : 'invisible'}`}
     >
       {/* modal */}
       <div
         ref={modal}
-        className={`bg-primary rounded-xl absolute right-0 
-        z-20 shadow p-6 w-1/3 h-1/2 transition-all
+        className={`bg-background rounded-xl absolute right-0 
+        z-20 shadow p-6 w-1/2 h-full transition-all
             ${open ? 'scale-100 opacity-100' : 'scale-125 opacity-0'}`}
       >
         <button
           type='button'
           onClick={onClose}
-          className='absolute top-2 right-2 p-2 rounded-lg 
-          text-text bg-primary hover:bg-secondary'
+          className='absolute top-8 right-8 p-2 rounded
+          fill-secondary transition
+          hover:bg-secondary hover:fill-background'
         >
           {CloseIcon({ height: 24, width: 24 })}
         </button>
