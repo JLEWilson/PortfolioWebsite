@@ -1,6 +1,6 @@
 import React from 'react'
 import { MenuIcon } from '../consts/icons'
-import Links from './links'
+import Links, { flexDirection } from './links'
 import Modal from './modal'
 
 // This file should be renamed and made more single funcion,
@@ -12,17 +12,21 @@ function NavMenu() {
 
   return (
     <div className=''>
-      <div className='absolute top-10 right-10 fill-secondary'>
-        <Modal open={modalOpen} onClose={() => setModalOpen(false)}>
-          <h1>This is text</h1>
-        </Modal>
-        <button type='button' onClick={() => setModalOpen(true)}>
-          {MenuIcon({ height: 24, width: 24 })}
-        </button>
-      </div>
-
+      <Modal open={modalOpen} onClose={() => setModalOpen(false)}>
+        <h1>This is text</h1>
+        <Links direction={flexDirection.column} />
+      </Modal>
+      <button
+        type='button'
+        onClick={() => setModalOpen(true)}
+        className='absolute top-8 right-8 p-2 fill-secondary 
+        hover:bg-secondary hover:fill-background transition
+        rounded'
+      >
+        {MenuIcon({ height: 24, width: 24 })}
+      </button>
       <div className='hidden md:block'>
-        <Links />
+        <Links direction={flexDirection.row} />
       </div>
     </div>
   )
