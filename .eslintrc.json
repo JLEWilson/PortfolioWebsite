@@ -33,6 +33,8 @@
       { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
     ],
     "react/prop-types": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
     "react/require-default-props": "off",
     "max-len": ["error", { "code": 81 }],
     "indent": ["error", 2, { "SwitchCase": 1 }],
