@@ -25,7 +25,8 @@
     "build": "react-scripts build",
     "test": "jest",
     "test react": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint --fix --ext .ts,.tsx ."
   },
   "engines": {
     "node": ">=16.0.0"
