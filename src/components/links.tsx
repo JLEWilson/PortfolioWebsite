@@ -35,16 +35,21 @@ const links: linkProps[] = [
   },
 ]
 
-const Links: React.FC<linksProps> = ({direction, titleOnHover = false}) => {
+const Links: React.FC<linksProps> = ({ direction, titleOnHover = false }) => {
   return (
-    <ul className={`flex space-x-8 ${direction === flexDirection.column ? 'flex-col' : 'flex-row'}`}>
+    <ul
+      className={`flex ${
+        direction === flexDirection.column ? 'flex-col space-y-4' 
+        : 'flex-row space-x-8'
+      }`}
+    >
       {links.map((link, index) => (
         <li key={index}>
-          <a className='group fill-text p-2' href={link.url}>
+          <a className='group/link fill-text p-2 ' href={link.url}>
             {link.icon({ height: 24, width: 24 })}
-            {titleOnHover && <h4 className='hidden group-hover: block'>{ 
-              link.title 
-            }</h4>}
+            {titleOnHover && (
+              <h4 className='hidden absolute text-text group-hover/link:block'>{link.title} </h4>
+            )}
           </a>
         </li>
       ))}
