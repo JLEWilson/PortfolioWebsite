@@ -17,7 +17,7 @@ const delayTransitions = [
   'delay-[450ms]',
 ]
 
-const Project = ({ repoData }: projectPropTypes) => {
+function Project({ repoData }: projectPropTypes) {
   return (
     <div
       className={join(
@@ -31,7 +31,7 @@ const Project = ({ repoData }: projectPropTypes) => {
         {repoData.links.map((link, index) => (
           <a
             href={link.url}
-            key={'link ' + index}
+            key={`link ${index}`}
             className={join(
               'flex space-x-1.5',
               'fill-secondary bg-primary',
@@ -53,7 +53,7 @@ const Project = ({ repoData }: projectPropTypes) => {
         {repoData.languages.map((language, index) => (
           <Typography
             variant='small'
-            key={'language ' + index}
+            key={`language ${index}`}
             className={join(
               'bg-secondary text-background ',
               'transition',
@@ -68,7 +68,7 @@ const Project = ({ repoData }: projectPropTypes) => {
         {repoData.technologies.map((tech, index) => (
           <Typography
             variant='small'
-            key={'technology ' + index}
+            key={`technology ${index}`}
             className={join(
               'bg-secondary text-background ',
               'transition',

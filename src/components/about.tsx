@@ -2,7 +2,7 @@ import React from 'react'
 import { Typography } from '../Typography'
 import join from '../utils'
 
-const About = () => {
+function About() {
   return (
     <section
       className={join(

@@ -5,7 +5,7 @@ type Variant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'body' | 'body-small' | 'small
 interface Props {
   variant: Variant
   children: ReactNode
-  className?: string 
+  className?: string
   as?: ElementType
 }
 
@@ -31,7 +31,7 @@ const sizes: Record<Variant, string> = {
   'small': 'xl:text-md lg:text-sm md:text-xs text-xs',
 }
 
-export const Typography = ({ variant, children, className, as }: Props) => {
+export function Typography({ variant, children, className, as }: Props) {
   const sizeClasses = sizes[variant]
   const Tag = as || tags[variant]
 

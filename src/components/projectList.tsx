@@ -8,7 +8,7 @@ type projectPropTypes = {
   reposList: repository[]
 }
 
-const ProjectList = (props: projectPropTypes) => {
+function ProjectList(props: projectPropTypes) {
   return (
     <section className='mt-60 font-Changa font-light text-text  md:mx-20 mx-5'>
       <Typography variant='h1'>Projects</Typography>
