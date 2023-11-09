@@ -14,7 +14,7 @@ function NavMenu() {
     <div className=''>
       <Modal open={modalOpen} onClose={() => setModalOpen(false)}>
         <h1>This is text</h1>
-        <Links direction={flexDirection.column} />
+        <Links direction={flexDirection.column} titleOnHover />
       </Modal>
       <button
         type='button'
@@ -26,7 +26,7 @@ function NavMenu() {
         {MenuIcon({ height: 24, width: 24 })}
       </button>
       <div className='hidden md:block'>
-        <Links direction={flexDirection.row} />
+        <Links direction={flexDirection.row} titleOnHover />
       </div>
     </div>
   )
