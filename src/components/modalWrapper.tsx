@@ -7,11 +7,11 @@ import Modal from './modal'
 // possibly a nav container but for now we can
 // flesh it out and separate
 
-function NavMenu() {
+function ModalWrapper() {
   const [modalOpen, setModalOpen] = React.useState(false)
 
   return (
-    <div className=''>
+    <div>
       <Modal open={modalOpen} onClose={() => setModalOpen(false)}>
         <h1>This is text</h1>
         <Links direction={flexDirection.column} />
@@ -32,4 +32,4 @@ function NavMenu() {
   )
 }
 
-export default NavMenu
+export default ModalWrapper

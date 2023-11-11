@@ -1,7 +1,13 @@
 import React from 'react'
 import { CloseIcon } from '../consts/icons'
 
-function Modal({ open, onClose, children }: any) {
+interface ModalProps {
+  open: boolean,
+  onClose: () => void,
+  children: React.ReactNode
+}
+
+function Modal({ open, onClose, children }: ModalProps) {
   const modal = React.useRef<HTMLDivElement | null>(null)
   React.useEffect(() => {
     const handler = (event: any) => {

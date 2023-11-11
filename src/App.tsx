@@ -5,7 +5,8 @@ import ProjectList from './components/projectList'
 import REPOSITORY_LIST from './consts/RepositoryList'
 import Header from './components/header'
 import Title from './components/title'
-import NavMenu from './components/navMenu'
+import NavMenu from './components/modalWrapper'
+import ModalWrapper from './components/modalWrapper'
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <div className={join('md:flex sticky')}>
         <Header />
       </div>
-      <NavMenu />
+      <ModalWrapper />
       <Title />
       <About />
       <ProjectList reposList={REPOSITORY_LIST} />
