@@ -9,7 +9,6 @@ export enum flexDirection {
 // rename these for clarity
 type linksProps = {
   direction: flexDirection
-  titleOnHover?: boolean
 }
 type linkProps = {
   icon: (props: svgProps) => React.JSX.Element
@@ -35,11 +34,12 @@ const links: linkProps[] = [
   },
 ]
 
-const Links: React.FC<linksProps> = ({ direction, titleOnHover = false }) => {
+const Links: React.FC<linksProps> = ({ direction}) => {
+  const col = direction === flexDirection.column
   return (
     <ul
       className={`flex ${
-        direction === flexDirection.column ? 'flex-col space-y-4' 
+        col ? 'flex-col space-y-4' 
         : 'flex-row space-x-8'
       }`}
     >
@@ -47,9 +47,10 @@ const Links: React.FC<linksProps> = ({ direction, titleOnHover = false }) => {
         <li key={index}>
           <a className='group/link fill-text p-2 ' href={link.url}>
             {link.icon({ height: 24, width: 24 })}
-            {titleOnHover && (
-              <h4 className='hidden absolute text-text group-hover/link:block'>{link.title} </h4>
-            )}
+              <h4 className={`hidden  absolute text-text group-hover/link:block
+              ${col ? "translate-x-8 -translate-y-full" : "-translate-x-1/4"}`}>
+                {link.title}
+              </h4>
           </a>
         </li>
       ))}
