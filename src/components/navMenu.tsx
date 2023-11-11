@@ -14,19 +14,19 @@ function NavMenu() {
     <div className=''>
       <Modal open={modalOpen} onClose={() => setModalOpen(false)}>
         <h1>This is text</h1>
-        <Links direction={flexDirection.column} titleOnHover />
+        <Links direction={flexDirection.column} />
       </Modal>
       <button
         type='button'
         onClick={() => setModalOpen(true)}
         className='absolute top-8 right-8 p-2 fill-secondary 
         hover:bg-secondary hover:fill-background transition
-        rounded'
+        rounded md:hidden'
       >
         {MenuIcon({ height: 24, width: 24 })}
       </button>
-      <div className='hidden md:block'>
-        <Links direction={flexDirection.row} titleOnHover />
+      <div className='hidden md:block absolute top-8 right-8'>
+        <Links direction={flexDirection.row} />
       </div>
     </div>
   )
