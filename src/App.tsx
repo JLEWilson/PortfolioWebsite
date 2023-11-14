@@ -5,20 +5,22 @@ import ProjectList from './components/projectList'
 import REPOSITORY_LIST from './consts/RepositoryList'
 import Header from './components/header'
 import Title from './components/title'
-import NavMenu from './components/modalWrapper'
+import { ScrollProvider } from './ScrollContext';
 import ModalWrapper from './components/modalWrapper'
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className={join('text-center bg-background min-h-screen m-0 p-0')}>
-      <div className={join('md:flex sticky')}>
-        <Header />
+    <ScrollProvider>
+      <div className={join('text-center bg-background min-h-screen m-0 p-0')}>
+        <div className={join('md:flex sticky')}>
+          <Header />
+        </div>
+        <ModalWrapper />
+        <Title />
+        <About />
+        <ProjectList reposList={REPOSITORY_LIST} />
       </div>
-      <ModalWrapper />
-      <Title />
-      <About />
-      <ProjectList reposList={REPOSITORY_LIST} />
-    </div>
+    </ScrollProvider>
   )
 }
 
