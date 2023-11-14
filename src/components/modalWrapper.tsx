@@ -2,6 +2,7 @@ import React from 'react'
 import { MenuIcon } from '../consts/icons'
 import Links, { flexDirection } from './links'
 import Modal from './modal'
+import Navigation from './navigation'
 
 // This file should be renamed and made more single funcion,
 // possibly a nav container but for now we can
@@ -14,6 +15,7 @@ function ModalWrapper() {
     <div>
       <Modal open={modalOpen} onClose={() => setModalOpen(false)}>
         <h1>This is text</h1>
+        <Navigation/>
         <Links direction={flexDirection.column} />
       </Modal>
       <button
