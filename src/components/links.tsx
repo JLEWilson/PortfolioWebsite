@@ -39,7 +39,7 @@ const Links: React.FC<linksProps> = ({ direction}) => {
   return (
     <ul
       className={`flex ${
-        col ? 'flex-col space-y-4' 
+        col ? 'flex-col space-y-4 pl-2' 
         : 'flex-row space-x-8'
       }`}
     >
