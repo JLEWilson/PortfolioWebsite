@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
+import { useScrollContext } from '../ScrollContext';
 import join from '../utils'
 
 function Title() {
+   const ref = useRef<HTMLDivElement>(null);
+  const { registerScrollTarget } = useScrollContext();
+
+  useEffect(() => {
+    registerScrollTarget(ref.current);
+  }, [registerScrollTarget]);
+
   return (
-    <div className='h-[33vh] z-1'>
+    <div ref={ref} className='h-[33vh] z-1'>
       <div
         className={join(
           'relative overflow-hidden',

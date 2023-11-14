@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useRef , useEffect} from 'react'
 import { Typography } from '../Typography'
+import { useScrollContext } from '../ScrollContext';
 import join from '../utils'
 
 function About() {
+  const ref = useRef<HTMLDivElement>(null);
+  const { registerScrollTarget } = useScrollContext();
+
+  useEffect(() => {
+    registerScrollTarget(ref.current);
+  }, [registerScrollTarget]);
+
   return (
     <section
+      ref={ref}
       className={join(
         'md:mt-52 mt-40 font-Changa font-light md:mx-20 mx-5 snap-center',
       )}
