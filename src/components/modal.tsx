@@ -38,14 +38,14 @@ function Modal({ open, onClose, children }: ModalProps) {
       <div
         ref={modal}
         className={`bg-background rounded-xl absolute right-0 
-        z-20 shadow p-6 w-1/2 h-full transition-all
+        z-20 shadow p-6 w-1/2 h-full transition-all flex flex-col
             ${open ? 'scale-100 opacity-100' : 'scale-125 opacity-0'}`}
       >
         <button
           type='button'
           onClick={onClose}
           className='absolute top-8 right-8 p-2 rounded
-          fill-secondary transition
+          fill-secondary transition bg-primary
           hover:bg-secondary hover:fill-background'
         >
           {CloseIcon({ height: 24, width: 24 })}
