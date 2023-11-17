@@ -14,16 +14,15 @@ function ModalWrapper() {
   return (
     <div>
       <Modal open={modalOpen} onClose={() => setModalOpen(false)}>
-        <h1>This is text</h1>
         <Navigation/>
-        <Links direction={flexDirection.column} />
+        <Links direction={flexDirection.column}/>
       </Modal>
       <button
         type='button'
         onClick={() => setModalOpen(true)}
         className='absolute top-8 right-8 p-2 fill-secondary 
-        hover:bg-secondary hover:fill-background transition
-        rounded md:hidden'
+        hover:fill-background hover:bg-secondary 
+        bg-primary transition rounded md:hidden'
       >
         {MenuIcon({ height: 24, width: 24 })}
       </button>
