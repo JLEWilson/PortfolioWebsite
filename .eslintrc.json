@@ -56,7 +56,7 @@
         "proseWrap": "never",
         "htmlWhitespaceSensitivity": "css",
         "vueIndentScriptAndStyle": false,
-        "endOfLine": "lf",
+        "endOfLine": "auto",
         "embeddedLanguageFormatting": "auto"
       }
     ]
