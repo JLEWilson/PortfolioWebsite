@@ -39,15 +39,15 @@ const Links: React.FC<linksProps> = ({ direction}) => {
   return (
     <ul
       className={`flex ${
-        col ? 'flex-col space-y-4 pl-2' 
+        col ? 'flex-col space-y-4 pl-2 mt-auto' 
         : 'flex-row space-x-8'
       }`}
     >
       {links.map((link, index) => (
         <li key={index}>
-          <a className='group/link fill-text p-2 ' href={link.url}>
+          <a className='group/link fill-text p-2' href={link.url}>
             {link.icon({ height: 24, width: 24 })}
-              <h4 className={`hidden  absolute text-text group-hover/link:block
+              <h4 className={`hidden absolute text-text group-hover/link:block
               ${col ? "translate-x-8 -translate-y-full" : "-translate-x-1/4"}`}>
                 {link.title}
               </h4>
