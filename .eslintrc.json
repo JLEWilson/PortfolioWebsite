@@ -36,7 +36,10 @@
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": "error",
     "react/require-default-props": "off",
-    "max-len": ["error", { "code": 81 }],
+    "max-len": ["error", {
+      "code": 81,
+      "ignoreUrls": true,
+    }],
     "indent": ["error", 2, { "SwitchCase": 1 }],
     "no-tabs": ["error", { "allowIndentationTabs": false }],
     "semi": ["error", "never"],
