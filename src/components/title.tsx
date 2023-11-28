@@ -19,17 +19,17 @@ const Title = () => {
         className={join(
           'relative overflow-hidden',
           'xl:h-[192px] md:h-[90px] h-[36px] ',
-          'snap-center',
-          'rounded -translate-x-1/2 z-1',
+          '-translate-x-1/2 z-1',
           'md:top-1/2 top-3/4 left-1/2',
+          'snap-center rounded',
         )}
       >
         <h1
           className={join(
-            'font-Roboto bg-primary',
-            'text-text xl:text-9xl/normal md:text-6xl/normal text-2xl/normal',
             'absolute z-1',
             'top-0 right-1/2 pl-4 pr-2',
+            'font-Roboto bg-primary',
+            'text-text xl:text-9xl/normal md:text-6xl/normal text-2xl/normal',
             'xl:animate-bigSlide md:animate-slide animate-smallSlide',
           )}
         >
@@ -45,9 +45,8 @@ const Title = () => {
         </h1>
         <h1
           className={join(
-            'font-Roboto',
-            'text-text bg-secondary',
             'absolute z-1 left-1/2 top-0 pl-2 pr-4',
+            'text-text bg-secondary font-Roboto',
             'xl:text-9xl/normal md:text-6xl/normal text-2xl/normal',
           )}
         >

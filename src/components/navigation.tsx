@@ -1,10 +1,14 @@
 import React from 'react'
 import { useScrollContext } from '../ScrollContext'
+import join from '../utils'
 
 const Navigation: React.FC = () => {
   const { scrollToTarget } = useScrollContext()
-  const buttonStyles =
-    'bg-moon-gradient bg-300% hover:animate-moon-md hover:border hover:border-primary rounded-lg text-left indent-1 p-2'
+  const buttonStyles = join(
+    'text-left indent-1 p-2',
+    'hover:border hover:border-primary rounded-lg ',
+    'bg-moon-gradient bg-300% hover:animate-moon-md',
+  )
   return (
     <nav className='flex flex-col space-y-12 mt-20 text-text'>
       <button

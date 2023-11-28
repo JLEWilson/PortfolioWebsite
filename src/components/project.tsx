@@ -20,7 +20,11 @@ const Project = ({ repoData }: projectPropTypes) => {
   return (
     <div
       className={join(
-        'group/project transition-colors hover:bg-primary rounded-3xl p-5 font-Roboto text-text snap-center ',
+        'group/project',
+        'p-5 rounded-3xl',
+        'font-Roboto text-text',
+        'snap-center ',
+        'transition-colors hover:bg-primary',
       )}
     >
       <Typography
@@ -36,11 +40,12 @@ const Project = ({ repoData }: projectPropTypes) => {
             key={`${repoData.name}: ${link.name}`}
             className={join(
               'flex space-x-1.5',
+              'rounded-full py-2 px-2 sm:px-4 mx-auto',
+              'group-hover/project:text-background',
               'fill-secondary bg-primary',
-              'rounded-full py-2 px-2 sm:px-4  mx-auto',
-              'transition',
-              'duration-700',
-              'group-hover/project:fill-background group-hover/project:bg-secondary group-hover/project:text-background',
+              'group-hover/project:fill-background',
+              'group-hover/project:bg-secondary',
+              'transition duration-700',
             )}
           >
             <span>{link.icon({ width: 24, height: 24 })}</span>
@@ -60,11 +65,11 @@ const Project = ({ repoData }: projectPropTypes) => {
             variant='small'
             key={`${repoData.name}: ${language}`}
             className={join(
-              'bg-secondary text-background ',
-              'transition',
-              'duration-300',
-              'group-hover/project:text-secondary group-hover/project:bg-background',
               'rounded-full py-2 px-3',
+              'transition duration-300',
+              'bg-secondary text-background ',
+              'group-hover/project:text-secondary',
+              'group-hover/project:bg-background',
             )}
           >
             {language}
@@ -75,12 +80,12 @@ const Project = ({ repoData }: projectPropTypes) => {
             variant='small'
             key={`${repoData.name}: ${tech}`}
             className={join(
-              'bg-secondary text-background ',
-              'transition',
-              'duration-300',
-              delayTransitions[index],
-              'group-hover/project:text-secondary group-hover/project:bg-background',
               'rounded-full py-2 px-3',
+              'transition duration-300',
+              delayTransitions[index],
+              'bg-secondary text-background ',
+              'group-hover/project:text-secondary',
+              'group-hover/project:bg-background',
             )}
           >
             {tech}

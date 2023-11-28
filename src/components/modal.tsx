@@ -1,5 +1,6 @@
 import React from 'react'
 import { CloseIcon } from '../consts/icons'
+import join from '../utils'
 
 interface ModalProps {
   open: boolean
@@ -28,23 +29,33 @@ const Modal = ({ open, onClose, children }: ModalProps) => {
   return (
     // backdrop
     <div
-      className={`fixed inset-0 justify-center items-center 
-      transition-colors z-10
-            ${open ? 'visible bg-black/40' : 'invisible'}`}
+      className={join(
+        'z-10',
+        'fixed inset-0 justify-center items-center',
+        'transition-colors',
+        `${open ? 'visible bg-black/40' : 'invisible'}`,
+      )}
     >
       {/* modal */}
       <div
         ref={modal}
-        className={`bg-background rounded-xl absolute right-0 
-        z-20 shadow p-6 w-1/2 h-full transition-all flex flex-col
-            ${open ? 'scale-100 opacity-100' : 'scale-125 opacity-0'}`}
+        className={join(
+          'w-1/2 h-full flex flex-col',
+          'absolute z-20 right-0 rounded-xl p-6',
+          'bg-background',
+          'shadow transition-all',
+          `${open ? 'scale-100 opacity-100' : 'scale-125 opacity-0'}`,
+        )}
       >
         <button
           type='button'
           onClick={onClose}
-          className='absolute top-8 right-8 p-2 rounded
-          fill-secondary transition bg-primary
-          hover:bg-secondary hover:fill-background'
+          className={join(
+            'absolute top-8 right-8',
+            'p-2 rounded',
+            'fill-secondary bg-primary hover:bg-secondary hover:fill-background',
+            'transition',
+          )}
         >
           {CloseIcon({ height: 24, width: 24 })}
         </button>

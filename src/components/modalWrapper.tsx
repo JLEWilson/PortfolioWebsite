@@ -3,6 +3,7 @@ import { MenuIcon } from '../consts/icons'
 import Links, { flexDirection } from './links'
 import Modal from './modal'
 import Navigation from './navigation'
+import join from '../utils'
 
 // This file should be renamed and made more single funcion,
 // possibly a nav container but for now we can
@@ -23,9 +24,13 @@ const ModalWrapper = () => {
       <button
         type='button'
         onClick={() => setModalOpen(true)}
-        className='absolute top-8 right-8 p-2 fill-secondary 
-        hover:fill-background hover:bg-secondary 
-        bg-primary transition rounded md:hidden'
+        className={join(
+          'md:hidden',
+          'absolute top-8 right-8',
+          'p-2 rounded',
+          'fill-secondary hover:fill-background hover:bg-secondary bg-primary',
+          'transition',
+        )}
       >
         {MenuIcon({ height: 24, width: 24 })}
       </button>

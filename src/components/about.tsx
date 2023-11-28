@@ -15,7 +15,9 @@ const About = () => {
     <section
       ref={ref}
       className={join(
-        'md:mt-52 mt-40 font-Changa font-light md:mx-20 mx-5 snap-center',
+        'md:mt-52 mt-40 md:mx-20 mx-5',
+        'font-Changa font-light',
+        'snap-center',
       )}
     >
       <Typography
