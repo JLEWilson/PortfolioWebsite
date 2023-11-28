@@ -2,31 +2,29 @@ import React from 'react'
 import { CloseIcon } from '../consts/icons'
 
 interface ModalProps {
-  open: boolean,
-  onClose: () => void,
+  open: boolean
+  onClose: () => void
   children: React.ReactNode
 }
 
-function Modal({ open, onClose, children }: ModalProps) {
+const Modal = ({ open, onClose, children }: ModalProps) => {
   const modal = React.useRef<HTMLDivElement | null>(null)
+
   React.useEffect(() => {
     const handler = (event: any) => {
       if (!modal.current) {
         return
       }
-      // if click was not inside of the element. "!" means not
-      // in other words, if click is outside the modal element
       if (!modal.current.contains(event.target)) {
         onClose()
       }
     }
-    // the key is using the `true` option
-    // `true` will enable the `capture` phase of event handling by browser
     document.addEventListener('click', handler, true)
     return () => {
       document.removeEventListener('click', handler)
     }
   }, [])
+
   return (
     // backdrop
     <div

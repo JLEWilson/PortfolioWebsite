@@ -5,7 +5,7 @@ import ProjectList from './components/projectList'
 import REPOSITORY_LIST from './consts/RepositoryList'
 import Header from './components/header'
 import Title from './components/title'
-import { ScrollProvider } from './ScrollContext';
+import { ScrollProvider } from './ScrollContext'
 import ModalWrapper from './components/modalWrapper'
 
 const App: React.FC = () => {

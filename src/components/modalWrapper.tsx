@@ -8,14 +8,17 @@ import Navigation from './navigation'
 // possibly a nav container but for now we can
 // flesh it out and separate
 
-function ModalWrapper() {
+const ModalWrapper = () => {
   const [modalOpen, setModalOpen] = React.useState(false)
 
   return (
     <div>
-      <Modal open={modalOpen} onClose={() => setModalOpen(false)}>
-        <Navigation/>
-        <Links direction={flexDirection.column}/>
+      <Modal
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+      >
+        <Navigation />
+        <Links direction={flexDirection.column} />
       </Modal>
       <button
         type='button'

@@ -4,24 +4,25 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "moon-gradient": `linear-gradient(90deg, #001C30 37%, #64CCC5 49%, #64CCC5 51%, #001C30 63%)`,
+        'moon-gradient':
+          'linear-gradient(90deg, #001C30 37%, #64CCC5 49%, #64CCC5 51%, #001C30 63%)',
       },
       backgroundSize: {
-        "auto": `auto`,
-        "cover": `cover`,
-        "contain": `contain`,
-        "300%": `300%`,
+        'auto': 'auto',
+        'cover': 'cover',
+        'contain': 'contain',
+        '300%': '300%',
       },
       animation: {
-        "bigSlide": 'text-slide-lg 8s infinite',
-        "slide": 'text-slide 8s infinite',
-        "smallSlide": 'text-slide-sm 8s infinite',
-        "moon-md": 'moon 1s'
+        'bigSlide': 'text-slide-lg 8s infinite',
+        'slide': 'text-slide 8s infinite',
+        'smallSlide': 'text-slide-sm 8s infinite',
+        'moon-md': 'moon 1s',
       },
       keyframes: {
         'moon': {
-          "0%": { backgroundPosition: `right` },
-          "100%": { backgroundPosition: `left` },
+          '0%': { backgroundPosition: 'right' },
+          '100%': { backgroundPosition: 'left' },
         },
         'text-slide-lg': {
           '0%': { top: '0' },
@@ -44,10 +45,10 @@ module.exports = {
           '60%': { top: '-108px' },
           '80%': { top: '-144px' },
         },
-        'modal-open' : {
-          '0%': { top: "10", right: '10' },
-          '100%': {top: '0', right: '0'}
-        }
+        'modal-open': {
+          '0%': { top: '10', right: '10' },
+          '100%': { top: '0', right: '0' },
+        },
       },
       colors: {
         background: '#001C30',

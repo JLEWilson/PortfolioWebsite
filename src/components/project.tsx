@@ -2,7 +2,6 @@ import React from 'react'
 import { Typography } from '../Typography'
 import join from '../utils'
 import { repository } from '../consts/RepositoryList'
-import { PlayStoreIcon } from '../consts/icons'
 
 type projectPropTypes = {
   repoData: repository
@@ -17,21 +16,24 @@ const delayTransitions = [
   'delay-[450ms]',
 ]
 
-function Project({ repoData }: projectPropTypes) {
+const Project = ({ repoData }: projectPropTypes) => {
   return (
     <div
       className={join(
         'group/project transition-colors hover:bg-primary rounded-3xl p-5 font-Roboto text-text snap-center ',
       )}
     >
-      <Typography variant='h2' className={join('m-2')}>
+      <Typography
+        variant='h2'
+        className={join('m-2')}
+      >
         {repoData.name}
       </Typography>
       <div className='flex text-secondary'>
-        {repoData.links.map((link, index) => (
+        {repoData.links.map((link) => (
           <a
             href={link.url}
-            key={`link ${index}`}
+            key={`${repoData.name}: ${link.name}`}
             className={join(
               'flex space-x-1.5',
               'fill-secondary bg-primary',
@@ -46,14 +48,17 @@ function Project({ repoData }: projectPropTypes) {
           </a>
         ))}
       </div>
-      <Typography variant='h4' className={join('my-4')}>
+      <Typography
+        variant='h4'
+        className={join('my-4')}
+      >
         {repoData.description}
       </Typography>
       <div className={join('flex flex-wrap gap-1.5 justify-center')}>
-        {repoData.languages.map((language, index) => (
+        {repoData.languages.map((language) => (
           <Typography
             variant='small'
-            key={`language ${index}`}
+            key={`${repoData.name}: ${language}`}
             className={join(
               'bg-secondary text-background ',
               'transition',
@@ -68,7 +73,7 @@ function Project({ repoData }: projectPropTypes) {
         {repoData.technologies.map((tech, index) => (
           <Typography
             variant='small'
-            key={`technology ${index}`}
+            key={`${repoData.name}: ${tech}`}
             className={join(
               'bg-secondary text-background ',
               'transition',

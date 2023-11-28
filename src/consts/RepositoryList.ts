@@ -1,6 +1,12 @@
+import React from 'react'
 import { GithubIcon, PlayStoreIcon } from './icons'
 import type { svgProps } from './icons'
 
+type projectLink = {
+  name: string
+  url: string
+  icon: (props: svgProps) => React.JSX.Element
+}
 export type repository = {
   name: string
   imgPath?: string
@@ -8,11 +14,6 @@ export type repository = {
   technologies: string[]
   description: string
   links: projectLink[]
-}
-type projectLink = {
-  name: string
-  url: string
-  icon: (props: svgProps) => JSX.Element
 }
 
 const REPOSITORY_LIST: repository[] = [
@@ -22,7 +23,8 @@ const REPOSITORY_LIST: repository[] = [
     languages: ['TypeScript'],
     technologies: ['ReactNative', 'Expo', 'Redux Toolkit', 'Expo'],
     description:
-      'A simple To Do List style app designed to be more accessible for users with ADHD by having an uncluttered interface.',
+      'A simple To Do List style app designed to be more accessible for users ' +
+      'with ADHD by having an uncluttered interface.',
     links: [
       {
         name: 'Github',
@@ -63,7 +65,8 @@ const REPOSITORY_LIST: repository[] = [
       'Aesprite',
     ],
     description:
-      'My class capstone in which you are able to view some of my class projects in a 2d hub world.',
+      'My class capstone in which you are able to view' +
+      ' some of my class projects in a 2d hub world.',
     links: [
       {
         name: 'Github',
@@ -83,7 +86,12 @@ const REPOSITORY_LIST: repository[] = [
     languages: ['Javascript'],
     technologies: ['JQuery', 'HTML Canvas', 'webpack', 'Html/CSS'],
     description:
-      'You are a student studying programming for the first time. Your working on one of your big end of week projects when you begin to feel yourself drift off to sleep. your project, Mr.Roboger, takes over your dream and sends you into his neighborhood. you will need to fight bugs and errors in your code to escape the neighborhood and finish your project on time...',
+      'You are a student studying programming for the first time. ' +
+      'Your working on one of your big end of week projects when you' +
+      ' begin to feel yourself drift off to sleep. your project, Mr.Roboger,' +
+      ' takes over your dream and sends you into his neighborhood.' +
+      'you will need to fight bugs and errors in your code to escape the ' +
+      'neighborhood and finish your project on time...',
     links: [
       {
         name: 'Github',
@@ -103,7 +111,9 @@ const REPOSITORY_LIST: repository[] = [
     languages: ['C#', 'SQL'],
     technologies: ['Bootstrap', 'HtmlHelper', 'EntityFrameworkCore'],
     description:
-      'An mvc application that allows logged in users to facilitate treat/flavor relations. Non logged in users can only view details while logged in users can create, edit, and delete relationships.',
+      'An mvc application that allows logged in users to facilitate ' +
+      'treat/flavor relations. Non logged in users can only view details' +
+      ' while logged in users can create, edit, and delete relationships.',
     links: [
       {
         name: 'Github',
