@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       backgroundImage: {
         'moon-gradient':
-          'linear-gradient(90deg, #001C30 37%, #64CCC5 49%, #64CCC5 51%, #001C30 63%)',
+          'linear-gradient(90deg, #001C30 37%, #64CCC5 49%, ' +
+            '#64CCC5 51%, #001C30 63%)',
       },
       backgroundSize: {
         'auto': 'auto',

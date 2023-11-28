@@ -1,6 +1,6 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "@stylistic/js", "prettier"],
+  "plugins": ["@typescript-eslint", "@stylistic/js", "prettier", "tailwindcss-3d"],
   "extends": ["airbnb", "plugin:prettier/recommended"],
   "settings": {
     "import/resolver": {
