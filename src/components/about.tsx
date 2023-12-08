@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react'
-import { Typography } from '../Typography'
+import Typography from '../Typography'
 import { useScrollContext } from '../ScrollContext'
 import join from '../utils'
 

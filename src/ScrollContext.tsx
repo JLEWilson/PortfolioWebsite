@@ -1,4 +1,4 @@
-import React, { createContext, useMemo, useState } from 'react'
+import React, { createContext, useMemo, useState, useContext } from 'react'
 
 interface ScrollProviderProps {
   children: React.ReactNode
@@ -11,7 +11,15 @@ interface ScrollContextValue {
 
 const ScrollContext = createContext<ScrollContextValue | undefined>(undefined)
 
-const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
+export const useScrollContext = () => {
+  const context = useContext(ScrollContext)
+  if (!context) {
+    throw new Error('useScrollContext must be used within a ScrollProvider')
+  }
+  return context
+}
+
+export const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
   const [scrollTargets, setScrollTargets] = useState<(HTMLElement | null)[]>([])
 
   const registerScrollTarget = (target: HTMLElement | null) => {
@@ -40,5 +48,3 @@ const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
     </ScrollContext.Provider>
   )
 }
-
-export default ScrollProvider
