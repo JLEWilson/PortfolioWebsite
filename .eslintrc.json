@@ -1,6 +1,6 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "@stylistic/js", "prettier", "tailwindcss-3d"],
+  "plugins": ["@typescript-eslint", "@stylistic/js", "prettier"],
   "extends": ["airbnb", "plugin:prettier/recommended"],
   "settings": {
     "import/resolver": {
@@ -10,9 +10,9 @@
     }
   },
   "env": {
-        "browser": true,
-        "node": true
-    },
+    "browser": true,
+    "node": true
+  },
   "rules": {
     "import/extensions": [
       "error",
@@ -29,22 +29,25 @@
       { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
     ],
     "react/function-component-definition": [
-        2,
-        {
-            "namedComponents": "arrow-function",
-            "unnamedComponents": "arrow-function"
-        }
-      ],
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": "warn",
     "react/prop-types": "off",
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": "error",
     "react/require-default-props": "off",
-    "max-len": ["error", {
-      "code": 81,
-      "ignoreUrls": true
-    }],
+    "max-len": [
+      "error",
+      {
+        "code": 81,
+        "ignoreUrls": true
+      }
+    ],
     "no-tabs": ["error", { "allowIndentationTabs": false }],
     "quotes": ["error", "single", { "avoidEscape": true }],
     "quote-props": ["error", "consistent"],
