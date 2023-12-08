@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react'
 import join from '../utils'
 import Project from './project'
 import { repository } from '../consts/RepositoryList'
-import { Typography } from '../Typography'
+import Typography from '../Typography'
 import { useScrollContext } from '../ScrollContext'
 
 type projectPropTypes = {

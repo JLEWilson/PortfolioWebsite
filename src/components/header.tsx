@@ -1,6 +1,6 @@
 import React from 'react'
 import join from '../utils'
-import { Typography } from '../Typography'
+import Typography from '../Typography'
 
 const Header = () => {
   return (
